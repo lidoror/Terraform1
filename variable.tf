@@ -1,43 +1,42 @@
 
+//REGION
+variable "region_to_deploy" {
+  description = "The region of the project deployment"
+  type = string
+}
+
 variable "env" {
   description = "Deployment environment"
   type        = string
-  default     = "dev"
 }
 
 variable "resource_alias" {
   description = "Resource creator name"
   type        = string
-  default     = ""
 }
 
 variable "instance_key_tag" {
   description = "tag of the ssh key"
   type = string
-  default = ""
 }
 
 variable "dev_bucket_name" {
   description = "name of the bucket"
   type = string
-  default = ""
 }
 
 variable "k0s_instance_name_tag" {
   description = "name of the the k0s instance"
   type = string
-  default = ""
 }
 
 variable "jenkins_instance_name_tag" {
   description = "name of the jenkins instance"
   type = string
-  default = ""
 }
 
 
 //VPC VARS
-
 variable "vpc_cidr" {
   description = "CIDR block for VPC"
   type        = string
@@ -55,3 +54,4 @@ variable "vpc_public_subnets" {
   type        = list(string)
   default     = ["10.0.3.0/24", "10.0.4.0/24"]
 }
+

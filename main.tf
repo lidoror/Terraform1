@@ -1,23 +1,6 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "~> 4.16"
-    }
-  }
-
-  backend "s3" {
-    bucket = "name-of-the-bucket"
-    key    = "file name"
-    region = "bucket-region"
-    dynamodb_table = "dynamodb table"
-
-  }
-  required_version = ">= 1.2.0"
-}
 
 provider "aws" {
-  region = "region-to-deploy"
+  region = var.region_to_deploy
 }
 
 
